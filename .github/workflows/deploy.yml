@@ -11,9 +11,16 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - name: Zorg dat het Pages-project bestaat
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create luna-cocktailworkshop --production-branch=main
       - name: Deploy naar Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=luna-cocktailworkshop
+          command: pages deploy . --project-name=luna-cocktailworkshop --commit-dirty=true
