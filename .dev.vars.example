@@ -1,0 +1,7 @@
+# Kopieer naar .dev.vars voor lokaal testen. NIET committen.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+RESEND_API_KEY=re_xxxxxxxxxxxx
+MAIL_NAAR=info@cafeluna-delft.nl
+MAIL_VAN=aanvraag@cafeluna-delft.nl
+META_PIXEL_ID=000000000000000
+META_CAPI_TOKEN=EAAxxxxxxxxxxxx

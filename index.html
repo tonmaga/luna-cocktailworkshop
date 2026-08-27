@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cocktailworkshop in Delft — Cocktailbar Luna | Markt 69</title>
+<meta name="description" content="Shake in 2 uur je eigen cocktails bij Cocktailbar Luna op de Markt in Delft. Hét uitje voor bedrijfsuitjes, vrijgezellenfeesten en verjaardagen. Check direct de beschikbaarheid.">
+<!-- ===== 1. CONSENT MODE v2 — moet vóór GTM en vóór elke andere tag laden ===== -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  'ad_storage':'denied',
+  'ad_user_data':'denied',
+  'ad_personalization':'denied',
+  'analytics_storage':'denied',
+  'functionality_storage':'granted',
+  'security_storage':'granted',
+  'wait_for_update': 500
+});
+gtag('set','ads_data_redaction', true);
+gtag('set','url_passthrough', true);
+</script>
+
+<!-- ===== 2. CMP (Cookiebot) — vervang CBID door je eigen ID =====
+     Advanced mode: tags laden wel, maar zonder cookies bij weigering.
+     Hierdoor blijft Google conversies modelleren i.p.v. ze te verliezen. -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+        data-cbid="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+        data-blockingmode="auto" type="text/javascript"></script>
+
+<!-- ===== 3. Google Tag Manager — vervang GTM-XXXXXXX ===== -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nacht:#1D1233;          /* diep avondviolet — de bar na zonsondergang */
+  --nacht-2:#2A1B47;
+  --amber:#FF8A3D;          /* passievrucht-oranje — CTA */
+  --amber-diep:#E86F1F;
+  --creme:#FBF6EE;          /* daglicht-secties */
+  --wit:#FFFFFF;
+  --inkt:#241A38;           /* tekst op licht */
+  --inkt-zacht:#5C5470;
+  --delft:#2B4C9B;          /* Delfts blauw — signatuur */
+  --delft-licht:#EBF0FA;
+  --goud:#F5C25B;           /* sterren */
+  --radius:14px;
+  --schaduw:0 10px 30px rgba(29,18,51,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{font-family:'Figtree',system-ui,sans-serif;color:var(--inkt);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Bricolage Grotesque',serif;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- knoppen ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:'Figtree',sans-serif;font-weight:700;font-size:1.02rem;border:none;border-radius:999px;padding:1rem 1.9rem;cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:focus-visible{outline:3px solid var(--delft);outline-offset:3px}
+.btn-primair{background:var(--amber);color:#2A1400;box-shadow:0 6px 22px rgba(255,138,61,.38)}
+.btn-primair:hover{background:var(--amber-diep);transform:translateY(-2px)}
+.btn-wa{background:rgba(255,255,255,.10);color:var(--wit);border:1.5px solid rgba(255,255,255,.35)}
+.btn-wa:hover{background:rgba(255,255,255,.18)}
+.btn-wa svg{flex:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:radial-gradient(1200px 600px at 75% -10%, var(--nacht-2), var(--nacht) 60%);color:var(--wit);overflow:hidden;padding:1.4rem 0 4.2rem}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:90px;background:linear-gradient(to top,rgba(0,0,0,.25),transparent);pointer-events:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.4rem 0 2.6rem}
+.merk{font-family:'Bricolage Grotesque',serif;font-weight:800;font-size:1.25rem;letter-spacing:.02em}
+.merk span{color:var(--amber)}
+.topbar a.bel{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;white-space:nowrap}
+.topbar a.bel:hover{color:var(--wit)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.hero .eyebrow{color:var(--goud);margin-bottom:1rem}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:800;margin-bottom:1.1rem}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.sub{font-size:1.13rem;color:rgba(255,255,255,.82);max-width:34rem;margin-bottom:1.7rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-bottom:1.4rem}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;font-size:.92rem;color:rgba(255,255,255,.75)}
+.sterren{color:var(--goud);letter-spacing:.12em;font-size:1rem}
+.prijskaart{position:relative;background:linear-gradient(160deg,#312054,#241740);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:2rem 1.8rem;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.prijskaart .glas{position:absolute;top:-46px;right:22px;width:82px;opacity:.95;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+.prijskaart .vanaf{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.6)}
+.prijskaart .prijs{font-family:'Bricolage Grotesque',serif;font-size:3rem;font-weight:800;color:var(--wit);line-height:1;margin:.25rem 0 .2rem}
+.prijskaart .prijs small{font-size:1rem;font-weight:600;color:rgba(255,255,255,.65)}
+.prijskaart ul{list-style:none;margin-top:1.1rem}
+.prijskaart li{display:flex;gap:.6rem;align-items:flex-start;padding:.42rem 0;color:rgba(255,255,255,.88);font-size:.98rem}
+.prijskaart li::before{content:"✦";color:var(--amber);font-size:.8rem;margin-top:.25rem}
+.prijskaart .btn{width:100%;margin-top:1.3rem}
+
+/* ---------- USP-strip ---------- */
+.usps{background:var(--nacht);border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.9);padding:1.1rem 0}
+.usps .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.9rem 2rem;font-size:.94rem;font-weight:600}
+.usps span{display:flex;align-items:center;gap:.5rem}
+.usps b{color:var(--goud);font-weight:400}
+
+/* ---------- secties ---------- */
+section{padding:4.2rem 0}
+.sectiekop{text-align:center;max-width:40rem;margin:0 auto 2.6rem}
+.sectiekop .eyebrow{color:var(--delft);margin-bottom:.6rem}
+.sectiekop h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800}
+.sectiekop p{color:var(--inkt-zacht);margin-top:.7rem}
+
+/* ---------- zo werkt het: Delftse tegels ---------- */
+.tegels{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.tegel{position:relative;background:var(--wit);border:2px solid var(--delft);border-radius:6px;padding:2.3rem 1.6rem 1.8rem;text-align:center;box-shadow:var(--schaduw)}
+.tegel::before,.tegel::after,.tegel .h1c,.tegel .h2c{content:"";position:absolute;width:16px;height:16px;background:
+  radial-gradient(circle at 0 0,transparent 11px,var(--delft) 11px 13px,transparent 13px)}
+.tegel::before{top:5px;left:5px}
+.tegel::after{top:5px;right:5px;transform:rotate(90deg)}
+.tegel .h1c{bottom:5px;right:5px;transform:rotate(180deg)}
+.tegel .h2c{bottom:5px;left:5px;transform:rotate(270deg)}
+.tegel .icoon{width:58px;height:58px;margin:0 auto 1rem;color:var(--delft)}
+.tegel h3{font-size:1.15rem;font-weight:700;margin-bottom:.45rem;color:var(--delft)}
+.tegel p{font-size:.96rem;color:var(--inkt-zacht)}
+.tegel .stapnr{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--delft);color:var(--wit);font-family:'Bricolage Grotesque',serif;font-weight:700;font-size:.85rem;padding:.15rem .85rem;border-radius:999px;letter-spacing:.06em}
+
+/* ---------- doelgroepen ---------- */
+.doelen{background:var(--wit)}
+.doel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.doel{background:var(--creme);border-radius:var(--radius);padding:1.9rem 1.6rem;border:1px solid #EFE6D8;display:flex;flex-direction:column}
+.doel .emoji{font-size:1.9rem;margin-bottom:.7rem}
+.doel h3{font-size:1.18rem;font-weight:700;margin-bottom:.5rem}
+.doel p{font-size:.96rem;color:var(--inkt-zacht);flex:1}
+.doel a{margin-top:1.1rem;font-weight:700;color:var(--delft);text-decoration:none;font-size:.96rem}
+.doel a:hover{text-decoration:underline}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--nacht);color:var(--wit)}
+.reviews .sectiekop .eyebrow{color:var(--goud)}
+.reviews .sectiekop p{color:rgba(255,255,255,.7)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.review{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.7rem 1.5rem}
+.review .sterren{margin-bottom:.7rem}
+.review p{font-size:.98rem;color:rgba(255,255,255,.88)}
+.review .naam{margin-top:1rem;font-size:.88rem;font-weight:600;color:rgba(255,255,255,.6)}
+.google-badge{display:flex;justify-content:center;margin-top:2rem;font-size:.92rem;color:rgba(255,255,255,.65);gap:.5rem;align-items:center}
+
+/* ---------- FAQ ---------- */
+.faq-lijst{max-width:44rem;margin:0 auto}
+details{background:var(--wit);border:1px solid #EDE4D6;border-radius:12px;margin-bottom:.8rem;overflow:hidden}
+summary{cursor:pointer;padding:1.05rem 1.3rem;font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Bricolage Grotesque',serif;font-size:1.3rem;color:var(--delft);flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .antwoord{padding:0 1.3rem 1.15rem;color:var(--inkt-zacht);font-size:.97rem}
+summary:focus-visible{outline:3px solid var(--delft);outline-offset:-3px}
+
+/* ---------- formulier ---------- */
+.aanvraag{background:linear-gradient(160deg,var(--nacht-2),var(--nacht));color:var(--wit)}
+.aanvraag-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.aanvraag .eyebrow{color:var(--goud);margin-bottom:.7rem}
+.aanvraag h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;margin-bottom:.9rem}
+.aanvraag .pitch{color:rgba(255,255,255,.78);margin-bottom:1.6rem}
+.zeker{list-style:none}
+.zeker li{display:flex;gap:.6rem;padding:.4rem 0;color:rgba(255,255,255,.85);font-size:.97rem}
+.zeker li::before{content:"✓";color:var(--amber);font-weight:800}
+.wa-alt{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.14)}
+.wa-alt p{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:.8rem}
+form{background:var(--wit);border-radius:18px;padding:2rem 1.8rem;color:var(--inkt);box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.veld{margin-bottom:1.05rem}
+label{display:block;font-size:.86rem;font-weight:700;margin-bottom:.3rem}
+label small{font-weight:500;color:var(--inkt-zacht)}
+input,select{width:100%;padding:.82rem .95rem;border:1.5px solid #DDD3C4;border-radius:10px;font-family:'Figtree',sans-serif;font-size:1rem;background:var(--creme);color:var(--inkt)}
+input:focus,select:focus{outline:none;border-color:var(--delft);box-shadow:0 0 0 3px rgba(43,76,155,.15)}
+.veld-rij{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+form .btn{width:100%;margin-top:.4rem}
+.micro{margin-top:.85rem;text-align:center;font-size:.84rem;color:var(--inkt-zacht)}
+.honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-turnstile{margin:.2rem 0 1rem}
+.foutmelding{display:none;margin-top:.8rem;padding:.7rem .9rem;background:#FDECEC;border:1px solid #F3C2C2;border-radius:10px;color:#9B2C2C;font-size:.9rem;text-align:center}
+.foutmelding.zichtbaar{display:block}
+.btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.succes{display:none;text-align:center;padding:2.5rem 1rem}
+.succes .vinkje{width:64px;height:64px;border-radius:50%;background:var(--delft-licht);color:var(--delft);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem}
+.succes h3{font-size:1.3rem;margin-bottom:.5rem}
+.succes p{color:var(--inkt-zacht);font-size:.97rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--nacht);color:rgba(255,255,255,.6);padding:2.2rem 0 6.5rem;font-size:.9rem;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer a{color:rgba(255,255,255,.8);text-decoration:none}
+footer a:hover{color:var(--wit)}
+
+/* ---------- sticky mobiele CTA ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--wit);box-shadow:0 -8px 30px rgba(29,18,51,.22);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(110%);transition:transform .3s ease}
+.sticky-cta.zichtbaar{transform:translateY(0)}
+.sticky-cta .p{line-height:1.2}
+.sticky-cta .p b{font-family:'Bricolage Grotesque',serif;font-size:1.15rem}
+.sticky-cta .p small{display:block;color:var(--inkt-zacht);font-size:.78rem}
+.sticky-cta .btn{padding:.75rem 1.3rem;font-size:.95rem;box-shadow:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:880px){
+  .hero-grid{grid-template-columns:1fr;gap:2.2rem}
+  .prijskaart{max-width:30rem}
+  .tegels,.doel-grid,.review-grid{grid-template-columns:1fr;max-width:30rem;margin:0 auto}
+  .aanvraag-grid{grid-template-columns:1fr;gap:2.2rem}
+  section{padding:3.2rem 0}
+}
+@media(max-width:760px){
+  .sticky-cta{display:flex}
+  footer{padding-bottom:7.5rem}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="merk">LUNA <span>·</span> Cocktailbar</div>
+      <a class="bel" href="tel:+31158200255">📞 015 – 820 02 55</a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Markt 69, Delft · Sinds 1989</div>
+        <h1 id="hero-titel">Shake je eigen cocktails, <em>midden op de Markt</em> in Delft</h1>
+        <p class="sub" id="hero-sub">In 2 uur leer je van onze bartenders shaken, mixen en garneren — en drink je natuurlijk alles wat je zelf maakt. Hét uitje voor teams, vrijgezellenfeesten en verjaardagen.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primair" href="#aanvraag">Check beschikbaarheid →</a>
+          <a class="btn btn-wa" href="https://wa.me/31158200255?text=Hoi!%20Ik%20wil%20graag%20een%20cocktailworkshop%20aanvragen." target="_blank" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.1 1z"/></svg>
+            App direct
+          </a>
+        </div>
+        <div class="trust">
+          <span class="sterren" aria-hidden="true">★★★★★</span>
+          <span><b>4,6</b> op Google · 300+ reviews · Al 35 jaar hét cocktailadres van Delft</span>
+        </div>
+      </div>
+      <aside class="prijskaart" aria-label="Wat je krijgt">
+        <svg class="glas" viewBox="0 0 90 110" fill="none" aria-hidden="true">
+          <path d="M12 8 L78 8 L47 52 L47 92" stroke="#FF8A3D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M30 100 L64 100" stroke="#FF8A3D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="62" cy="18" r="6" fill="#F5C25B"/>
+          <path d="M20 16 L70 16" stroke="#FF8A3D" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <div class="vanaf">Cocktailworkshop</div>
+        <div class="prijs">€ 32,50 <small>p.p.</small></div>
+        <ul>
+          <li>2 uur workshop achter de bar</li>
+          <li>Je maakt (en drinkt!) 3 cocktails</li>
+          <li>Eigen bartender voor je groep</li>
+          <li>Ook volledig alcoholvrij mogelijk</li>
+          <li>Vanaf 8 personen</li>
+        </ul>
+        <a class="btn btn-primair" href="#aanvraag">Vraag vrijblijvend aan</a>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ========== USP-STRIP ========== -->
+<div class="usps">
+  <div class="wrap">
+    <span><b>✦</b> Sinds 1989 een begrip in Delft</span>
+    <span><b>✦</b> Midden op de Markt, naast de Nieuwe Kerk</span>
+    <span><b>✦</b> Reactie binnen 24 uur</span>
+    <span><b>✦</b> Groepen van 8 tot 40 personen</span>
+  </div>
+</div>
+
+<!-- ========== ZO WERKT HET ========== -->
+<section id="hoe">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div class="eyebrow">Zo werkt het</div>
+      <h2>Van aanvraag tot proosten in drie stappen</h2>
+    </div>
+    <div class="tegels">
+      <article class="tegel"><span class="h1c"></span><span class="h2c"></span>
+        <div class="stapnr">STAP 1</div>
+        <svg class="icoon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="10" y="12" width="40" height="36" rx="4"/><path d="M10 22h40M20 8v8M40 8v8"/><path d="M22 33l6 6 12-12" stroke-width="3"/></svg>
+        <h3>Vraag aan</h3>
+        <p>Vul in met hoeveel personen je wilt komen en je voorkeursdatum. Binnen 24 uur hoor je van ons — vrijblijvend.</p>
+      </article>
+      <article class="tegel"><span class="h1c"></span><span class="h2c"></span>
+        <div class="stapnr">STAP 2</div>
+        <svg class="icoon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="30" cy="30" r="20"/><path d="M30 18v12l8 6"/></svg>
+        <h3>Wij plannen</h3>
+        <p>We stemmen datum, tijd en groepsgrootte met je af en zetten de bar voor jullie klaar. Jij hoeft niets te regelen.</p>
+      </article>
+      <article class="tegel"><span class="h1c"></span><span class="h2c"></span>
+        <div class="stapnr">STAP 3</div>
+        <svg class="icoon" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 10h20l-8 14v14"/><path d="M18 44h16"/><path d="M40 18l8-8M44 24l10-4M46 32l10 2" stroke-width="2"/></svg>
+        <h3>Jullie shaken</h3>
+        <p>Twee uur lang leer je shaken, mixen en garneren van onze bartenders — en proost je op het resultaat.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DOELGROEPEN ========== -->
+<section class="doelen" id="voor-wie">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div class="eyebrow">Voor elk feestje</div>
+      <h2>Het uitje waar wél iedereen zin in heeft</h2>
+    </div>
+    <div class="doel-grid">
+      <article class="doel">
+        <div class="emoji">🏢</div>
+        <h3>Bedrijfsuitje of teamborrel</h3>
+        <p>Geen gedwongen teambuilding, maar samen achter de bar. Werkt gegarandeerd beter dan een escaperoom — en je staat midden in het centrum voor de borrel erna.</p>
+        <a href="#aanvraag">Plan je teamuitje →</a>
+      </article>
+      <article class="doel">
+        <div class="emoji">👰</div>
+        <h3>Vrijgezellenfeest</h3>
+        <p>De perfecte start van de dag (of avond). De bruid achter de bar, de rest aan de cocktails — met foto's waar je nog jaren om lacht.</p>
+        <a href="#aanvraag">Regel het vrijgezellenfeest →</a>
+      </article>
+      <article class="doel">
+        <div class="emoji">🎂</div>
+        <h3>Verjaardag of gewoon zomaar</h3>
+        <p>Vier je verjaardag eens anders, of verzin gewoon een excuus. Ook met alcoholvrije cocktails, zodat écht iedereen meedoet.</p>
+        <a href="#aanvraag">Check de mogelijkheden →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div class="eyebrow">Wat gasten zeggen</div>
+      <h2>Al 35 jaar de lekkerste cocktails van Delft</h2>
+    </div>
+    <div class="review-grid">
+      <article class="review">
+        <div class="sterren" aria-label="5 van 5 sterren">★★★★★</div>
+        <p>"Superleuke workshop gedaan met collega's. De bartender maakte er echt een feestje van en de cocktails waren heerlijk. Zeker een aanrader!"</p>
+        <div class="naam">— Voorbeeldreview · vervang door echte Google-review</div>
+      </article>
+      <article class="review">
+        <div class="sterren" aria-label="5 van 5 sterren">★★★★★</div>
+        <p>"Vrijgezellenfeest van mijn zus hier gevierd. Alles was tot in de puntjes geregeld en de locatie op de Markt is prachtig."</p>
+        <div class="naam">— Voorbeeldreview · vervang door echte Google-review</div>
+      </article>
+      <article class="review">
+        <div class="sterren" aria-label="5 van 5 sterren">★★★★★</div>
+        <p>"Gezellige sfeer, kundige bartenders en je leert nog echt wat ook. De espresso martini die ik zelf maakte was de beste ooit 😉"</p>
+        <div class="naam">— Voorbeeldreview · vervang door echte Google-review</div>
+      </article>
+    </div>
+    <div class="google-badge">
+      <span class="sterren">★★★★★</span> 4,6 gemiddeld op Google · gebaseerd op 300+ reviews
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div class="eyebrow">Veelgestelde vragen</div>
+      <h2>Alles wat je wilt weten</h2>
+    </div>
+    <div class="faq-lijst">
+      <details>
+        <summary>Met hoeveel personen kunnen we komen?</summary>
+        <div class="antwoord">Workshops zijn mogelijk vanaf 8 personen, tot groepen van zo'n 40. Kom je met een grotere groep? Neem contact op, dan kijken we wat er kan.</div>
+      </details>
+      <details>
+        <summary>Wanneer kunnen workshops plaatsvinden?</summary>
+        <div class="antwoord">Doordeweeks kun je bij ons terecht voor workshops. In het laagseizoen zijn er ook mogelijkheden in het weekend. Geef je voorkeursdatum door, dan denken we mee.</div>
+      </details>
+      <details>
+        <summary>Kan het ook alcoholvrij?</summary>
+        <div class="antwoord">Jazeker! We maken net zo graag mocktails. Geef het door bij je aanvraag, dan zorgen we dat iedereen in de groep volwaardig meedoet.</div>
+      </details>
+      <details>
+        <summary>Hoe lang duurt de workshop en wat maak je?</summary>
+        <div class="antwoord">De workshop duurt zo'n 2 uur. Je leert de basistechnieken (shaken, bouwen, garneren) en maakt zelf 3 cocktails — die je uiteraard ook opdrinkt.</div>
+      </details>
+      <details>
+        <summary>Waar zit Luna en kan ik parkeren?</summary>
+        <div class="antwoord">Je vindt ons op Markt 69 in Delft, pal naast de Nieuwe Kerk. Parkeren kan in Parkeergarage Markt (5 min. lopen); station Delft ligt op 10 minuten wandelen.</div>
+      </details>
+      <details>
+        <summary>Is mijn aanvraag direct een boeking?</summary>
+        <div class="antwoord">Nee — je aanvraag is volledig vrijblijvend. We nemen binnen 24 uur contact op om de details af te stemmen. Pas daarna bevestig je de boeking.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AANVRAAG ========== -->
+<section class="aanvraag" id="aanvraag">
+  <div class="wrap">
+    <div class="aanvraag-grid">
+      <div>
+        <div class="eyebrow">Vrijblijvend aanvragen</div>
+        <h2>Check de beschikbaarheid voor jouw groep</h2>
+        <p class="pitch">Vul het formulier in — binnen 24 uur (meestal veel sneller) hoor je van ons of jouw datum kan.</p>
+        <ul class="zeker">
+          <li>Reactie binnen 24 uur</li>
+          <li>100% vrijblijvend — je zit nergens aan vast</li>
+          <li>Persoonlijk contact, geen automatische mails</li>
+        </ul>
+        <div class="wa-alt">
+          <p>Liever even snel appen? Dat kan ook:</p>
+          <a class="btn btn-wa" href="https://wa.me/31158200255?text=Hoi!%20Ik%20wil%20graag%20een%20cocktailworkshop%20aanvragen." target="_blank" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.1 1z"/></svg>
+            WhatsApp: 015 – 820 02 55
+          </a>
+        </div>
+      </div>
+      <div>
+        <form id="workshop-form" novalidate>
+          <div class="veld">
+            <label for="naam">Je naam</label>
+            <input type="text" id="naam" name="naam" autocomplete="name" autocapitalize="words"
+                   enterkeyhint="next" required placeholder="Voor- en achternaam">
+          </div>
+          <div class="veld">
+            <label for="telefoon">Telefoonnummer</label>
+            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" inputmode="tel"
+                   enterkeyhint="next" required placeholder="06 – 12 34 56 78">
+          </div>
+          <div class="veld">
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email"
+                   enterkeyhint="next" required placeholder="jij@voorbeeld.nl">
+          </div>
+          <div class="veld-rij">
+            <div class="veld">
+              <label for="personen">Aantal personen</label>
+              <select id="personen" name="personen" required>
+                <option value="" disabled selected>Kies aantal</option>
+                <option>8 – 10</option>
+                <option>11 – 15</option>
+                <option>16 – 20</option>
+                <option>21 – 30</option>
+                <option>30+</option>
+              </select>
+            </div>
+            <div class="veld">
+              <label for="datum">Voorkeursdatum</label>
+              <input type="date" id="datum" name="datum" required>
+            </div>
+          </div>
+          <div class="veld">
+            <label for="soort">Soort uitje <small>(optioneel)</small></label>
+            <select id="soort" name="soort">
+              <option value="" selected>Maakt niet uit / anders</option>
+              <option>Bedrijfsuitje / teamborrel</option>
+              <option>Vrijgezellenfeest</option>
+              <option>Verjaardag</option>
+            </select>
+          </div>
+          <!-- Honeypot: onzichtbaar voor mensen, onweerstaanbaar voor bots -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Cloudflare Turnstile: onzichtbare spamcheck, geen CAPTCHA-frictie -->
+          <div class="cf-turnstile" data-sitekey="0xXXXXXXXXXXXXXXXXXX" data-size="flexible"></div>
+
+          <!-- Attributie: ingevuld door script, nodig voor offline conversie-import -->
+          <input type="hidden" name="gclid" id="f_gclid">
+          <input type="hidden" name="fbclid" id="f_fbclid">
+          <input type="hidden" name="fbp" id="f_fbp">
+          <input type="hidden" name="fbc" id="f_fbc">
+          <input type="hidden" name="event_id" id="f_event_id">
+          <input type="hidden" name="bron" id="f_bron">
+          <input type="hidden" name="paginavariant" id="f_variant">
+
+          <button type="submit" class="btn btn-primair" id="submit-knop">Check beschikbaarheid →</button>
+          <p class="micro" id="micro">Vrijblijvend · Reactie binnen 24 uur · Geen betaling nodig</p>
+          <p class="foutmelding" id="foutmelding" role="alert"></p>
+        </form>
+        <div class="succes" id="succes" role="status">
+          <div class="vinkje">✓</div>
+          <h3>Aanvraag ontvangen! 🍹</h3>
+          <p>We nemen binnen 24 uur contact met je op om de details af te stemmen. Tot snel op de Markt!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b style="color:#fff">Cocktailbar Luna</b> · Markt 69, 2611 GS Delft
+    </div>
+    <div>
+      <a href="tel:+31158200255">015 – 820 02 55</a> &nbsp;·&nbsp;
+      <a href="https://www.cafeluna-delft.nl" target="_blank" rel="noopener">cafeluna-delft.nl</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== STICKY MOBIELE CTA ========== -->
+<div class="sticky-cta" id="sticky">
+  <div class="p"><b>€ 32,50 p.p.</b><small>2 uur · 3 cocktails · vanaf 8 pers.</small></div>
+  <a class="btn btn-primair" href="#aanvraag">Check beschikbaarheid</a>
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+/* =====================================================================
+   LUNA COCKTAILWORKSHOP — TRACKING & CONVERSIELAAG
+   Alle events gaan via dataLayer naar GTM. Nooit tags hardcoden hier:
+   in GTM koppel je ze aan GA4, Google Ads en Meta Pixel.
+   ===================================================================== */
+
+var LUNA = (function(){
+  'use strict';
+
+  /* ---- Attributie vastleggen en 90 dagen bewaren -------------------
+     Een bezoeker klikt vandaag op een ad en vraagt over een week aan.
+     Zonder opslag verlies je dan de gclid en dus je offline conversie. */
+  var BEWAARDUUR = 90 * 24 * 60 * 60 * 1000;
+
+  function bewaar(sleutel, waarde){
+    try { localStorage.setItem('luna_'+sleutel, JSON.stringify({v:waarde, t:Date.now()})); } catch(e){}
+  }
+  function haal(sleutel){
+    try {
+      var r = JSON.parse(localStorage.getItem('luna_'+sleutel));
+      if (!r || Date.now() - r.t > BEWAARDUUR) return '';
+      return r.v;
+    } catch(e){ return ''; }
+  }
+  function cookie(naam){
+    var m = document.cookie.match('(^|;)\\s*'+naam+'\\s*=\\s*([^;]+)');
+    return m ? m.pop() : '';
+  }
+
+  var params = new URLSearchParams(location.search);
+  ['gclid','fbclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+    .forEach(function(p){ if (params.get(p)) bewaar(p, params.get(p)); });
+
+  /* ---- event_id: dedupliceert browser- en server-events -------------
+     Meta ontvangt dezelfde lead twee keer (pixel + CAPI). Zonder
+     gedeelde event_id telt hij hem dubbel en klopt je CPL niet. */
+  function nieuwEventId(){
+    return 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2,10);
+  }
+
+  /* ---- Centrale event-push ---------------------------------------- */
+  function push(naam, data){
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({event: naam}, data || {}));
+  }
+
+  return {
+    push: push,
+    haal: haal,
+    cookie: cookie,
+    nieuwEventId: nieuwEventId,
+    variant: params.get('d') || 'standaard'
+  };
+})();
+
+/* =====================================================================
+   Doelgroep-varianten (?d=bedrijf | vrijgezellen | verjaardag)
+   Eén pagina, drie boodschappen. Message match per Google ad group.
+   ===================================================================== */
+(function(){
+  var varianten = {
+    bedrijf: {
+      t: 'Het teamuitje waar <em>wél iedereen</em> zin in heeft',
+      s: 'In 2 uur shaken jullie samen de lekkerste cocktails achter onze bar op de Markt in Delft. Beter dan een escaperoom — en de borrel erna staat al klaar.',
+      soort: 'Bedrijfsuitje / teamborrel'
+    },
+    vrijgezellen: {
+      t: 'Het vrijgezellenfeest dat <em>niemand vergeet</em>',
+      s: 'Zet de bruid (of bruidegom) achter de bar en shake in 2 uur je eigen cocktails, midden op de Markt in Delft. Foto\u2019s waar je nog jaren om lacht.',
+      soort: 'Vrijgezellenfeest'
+    },
+    verjaardag: {
+      t: 'Vier je verjaardag <em>achter de bar</em>',
+      s: 'Shake in 2 uur je eigen cocktails met je vrienden, midden op de Markt in Delft. Ook alcoholvrij — zodat écht iedereen meedoet.',
+      soort: 'Verjaardag'
+    }
+  };
+  var v = varianten[LUNA.variant];
+  if (!v) return;
+  document.getElementById('hero-titel').innerHTML = v.t;
+  document.getElementById('hero-sub').innerHTML = v.s;
+  document.title = v.t.replace(/<[^>]+>/g,'') + ' — Cocktailbar Luna Delft';
+  var soort = document.getElementById('soort');
+  for (var i=0;i<soort.options.length;i++){
+    if (soort.options[i].text === v.soort) soort.selectedIndex = i;
+  }
+})();
+
+/* =====================================================================
+   Verborgen attributievelden vullen
+   ===================================================================== */
+(function(){
+  document.getElementById('f_gclid').value   = LUNA.haal('gclid') || LUNA.haal('gbraid') || LUNA.haal('wbraid');
+  document.getElementById('f_fbclid').value  = LUNA.haal('fbclid');
+  document.getElementById('f_fbp').value     = LUNA.cookie('_fbp');
+  document.getElementById('f_fbc').value     = LUNA.cookie('_fbc');
+  document.getElementById('f_variant').value = LUNA.variant;
+  document.getElementById('f_bron').value    =
+    [LUNA.haal('utm_source'), LUNA.haal('utm_medium'), LUNA.haal('utm_campaign')].filter(Boolean).join(' / ')
+    || document.referrer || 'direct';
+})();
+
+/* =====================================================================
+   Micro-conversies — voeden retargeting-doelgroepen en geven het
+   algoritme signaal in weken met weinig leads
+   ===================================================================== */
+(function(){
+  /* Scrolldiepte 50% en 75% */
+  var bereikt = {};
+  function checkScroll(){
+    var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+    [50, 75].forEach(function(grens){
+      if (pct >= grens && !bereikt[grens]) {
+        bereikt[grens] = true;
+        LUNA.push('scroll_diepte', {diepte: grens});
+      }
+    });
+  }
+  window.addEventListener('scroll', checkScroll, {passive:true});
+
+  /* FAQ geopend = koopintentie */
+  document.querySelectorAll('details').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (d.open) LUNA.push('faq_geopend', {vraag: d.querySelector('summary').textContent.trim()});
+    });
+  });
+
+  /* Formulier gestart: eerste interactie met een veld */
+  var gestart = false;
+  document.getElementById('workshop-form').addEventListener('input', function(){
+    if (gestart) return;
+    gestart = true;
+    LUNA.push('formulier_gestart');
+  }, true);
+
+  /* WhatsApp- en telefoonklikken zijn volwaardige leads */
+  document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      LUNA.push('lead_whatsapp', {
+        event_id: LUNA.nieuwEventId(),
+        waarde: 70,
+        variant: LUNA.variant
+      });
+    });
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      LUNA.push('lead_telefoon', {
+        event_id: LUNA.nieuwEventId(),
+        waarde: 70,
+        variant: LUNA.variant
+      });
+    });
+  });
+})();
+
+/* =====================================================================
+   Formulier-verzending
+   Fail fast: geen stille fallbacks. Lukt het niet, dan ziet de bezoeker
+   dat direct en krijgt hij het WhatsApp-alternatief.
+   ===================================================================== */
+document.getElementById('workshop-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var form = e.target;
+  var knop = document.getElementById('submit-knop');
+  var fout = document.getElementById('foutmelding');
+
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+
+  var eventId = LUNA.nieuwEventId();
+  document.getElementById('f_event_id').value = eventId;
+
+  knop.disabled = true;
+  knop.textContent = 'Versturen…';
+  fout.classList.remove('zichtbaar');
+
+  var antwoord = await fetch('/api/lead', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+  });
+
+  if (!antwoord.ok) {
+    knop.disabled = false;
+    knop.textContent = 'Check beschikbaarheid →';
+    fout.textContent = 'Verzenden lukte niet. App ons via 015 – 820 02 55, dan regelen we het direct.';
+    fout.classList.add('zichtbaar');
+    LUNA.push('formulier_fout', {status: antwoord.status});
+    return;
+  }
+
+  /* Conversie-event: GTM stuurt dit door naar Google Ads en Meta Pixel.
+     De server stuurt hetzelfde event_id via CAPI — daar dedupliceert Meta op. */
+  LUNA.push('lead_formulier', {
+    event_id: eventId,
+    waarde: 100,
+    variant: LUNA.variant,
+    personen: form.personen.value,
+    soort_uitje: form.soort.value || 'onbekend'
+  });
+
+  form.style.display = 'none';
+  document.getElementById('succes').style.display = 'block';
+  document.getElementById('succes').scrollIntoView({behavior:'smooth', block:'center'});
+});
+
+/* =====================================================================
+   Sticky CTA op mobiel
+   ===================================================================== */
+(function(){
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  var form = document.getElementById('aanvraag');
+  var heroUit = false, formIn = false;
+  function update(){ sticky.classList.toggle('zichtbaar', heroUit && !formIn); }
+  new IntersectionObserver(function(e){ heroUit = !e[0].isIntersecting; update(); },{threshold:0}).observe(hero);
+  new IntersectionObserver(function(e){ formIn = e[0].isIntersecting; update(); },{threshold:.15}).observe(form);
+})();
+</script>
+</body>
+</html>

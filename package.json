@@ -1,0 +1,13 @@
+{
+  "name": "luna-cocktailworkshop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landingspagina cocktailworkshops Cafe Luna Delft",
+  "scripts": {
+    "dev": "wrangler pages dev . --compatibility-date=2026-01-01",
+    "deploy": "wrangler pages deploy . --project-name=luna-cocktailworkshop"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
