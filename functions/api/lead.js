@@ -4,18 +4,23 @@
  * Verwerkt een workshopaanvraag:
  *   1. valideert en controleert op spam (honeypot + Turnstile)
  *   2. mailt de aanvraag naar Luna
- *   3. stuurt het lead-event naar Meta Conversions API
+ *   3. stuurt het lead-event naar Meta Conversions API (best effort)
  *
- * Fail fast: elke ontbrekende voorwaarde geeft direct een foutstatus.
- * De browser toont dan het WhatsApp-alternatief.
+ * Fail fast op spamcontrole, validatie en mail: elke ontbrekende voorwaarde
+ * daar geeft direct een foutstatus, en de browser toont dan de mailto-fallback.
+ * De Meta-stap is bewust een uitzondering: zolang META_PIXEL_ID/META_CAPI_TOKEN
+ * niet zijn ingesteld (of de aanroep faalt), wordt de stap overgeslagen zonder
+ * de aanvraag te blokkeren — de mail naar Luna is het enige dat er echt toe
+ * doet voor de bezoeker. Zet dit terug naar fail-fast zodra Meta serieus wordt
+ * meegenomen in de attributie.
  *
  * Vereiste omgevingsvariabelen (Cloudflare Pages → Settings → Environment variables):
  *   TURNSTILE_SECRET   Cloudflare Turnstile secret key
  *   RESEND_API_KEY     API key van resend.com voor het versturen van mail
  *   MAIL_NAAR          mailadres van Luna, bijv. info@cafeluna-delft.nl
  *   MAIL_VAN           geverifieerd afzenderadres, bijv. aanvraag@cafeluna-delft.nl
- *   META_PIXEL_ID      je Meta pixel-ID
- *   META_CAPI_TOKEN    Conversions API access token
+ *   META_PIXEL_ID      optioneel: je Meta pixel-ID
+ *   META_CAPI_TOKEN    optioneel: Conversions API access token
  */
 
 export async function onRequestPost({ request, env }) {
@@ -36,10 +41,16 @@ export async function onRequestPost({ request, env }) {
   // --- 3. Mail naar Luna ---------------------------------------------------
   await stuurMail(lead, env);
 
-  // --- 4. Meta Conversions API ---------------------------------------------
+  // --- 4. Meta Conversions API (best effort, blokkeert de aanvraag niet) ---
   // Server-side event met hetzelfde event_id als de pixel, zodat Meta
   // dedupliceert. Vangt de 20-40% aan events die adblockers en iOS blokkeren.
-  await stuurNaarMeta(lead, request, env);
+  if (env.META_PIXEL_ID && env.META_CAPI_TOKEN) {
+    try {
+      await stuurNaarMeta(lead, request, env);
+    } catch (err) {
+      console.error('Meta CAPI mislukt (niet-blokkerend):', err);
+    }
+  }
 
   return json({ ok: true }, 200);
 }

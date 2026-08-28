@@ -24,6 +24,10 @@ via Google Ads en Meta.
   alle WhatsApp- en bel-knoppen uit de pagina gehaald.)
 - **Fail fast in de Function.** Ontbrekende omgevingsvariabelen of validatiefouten
   gooien direct een error. Niet stil doorgaan.
+  **Uitzondering: de Meta Conversions API-stap** (`stuurNaarMeta`) is bewust
+  best-effort — ontbrekende of falende Meta-config blokkeert de aanvraag niet.
+  Dit is tijdelijk, zolang Meta niet serieus wordt meegenomen (accountproblemen
+  bij Café Luna). Zet dit terug naar fail-fast zodra dat wel zo is.
 - **Elke functie doet één ding.** `stuurMail`, `stuurNaarMeta`, `verifieerTurnstile`
   blijven gescheiden.
 - **Tags nooit hardcoden in de pagina.** Alles gaat via `dataLayer` naar GTM.
