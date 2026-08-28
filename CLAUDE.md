@@ -83,10 +83,10 @@ in `index.html`:
 Inhoudelijk nog te verifiëren bij de klant:
 
 - Prijs `€ 32,50` is een aanname
-- Reviews zijn expliciet als voorbeeld gemarkeerd — vervangen door echte
-  Google-reviews met toestemming
-- Reviewscore 4,6 / 300+ verifiëren
+- Reviewscore 4,6 / 300+ in de hero-trustline verifiëren (de aparte
+  reviewsectie is verwijderd tot er echte workshopreviews zijn)
 - Foto's ontbreken; de hero heeft echt beeld nodig
+- "Sinds 1989" in de hero-eyebrow: klopt dit jaartal, en mag het genoemd worden?
 
 ## Commando's
 
