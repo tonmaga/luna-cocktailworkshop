@@ -70,9 +70,6 @@ h1,h2,h3{font-family:'Bricolage Grotesque',serif;line-height:1.08;letter-spacing
 .btn:focus-visible{outline:3px solid var(--delft);outline-offset:3px}
 .btn-primair{background:var(--amber);color:#2A1400;box-shadow:0 6px 22px rgba(255,138,61,.38)}
 .btn-primair:hover{background:var(--amber-diep);transform:translateY(-2px)}
-.btn-wa{background:rgba(255,255,255,.10);color:var(--wit);border:1.5px solid rgba(255,255,255,.35)}
-.btn-wa:hover{background:rgba(255,255,255,.18)}
-.btn-wa svg{flex:none}
 
 /* ---------- hero ---------- */
 .hero{position:relative;background:radial-gradient(1200px 600px at 75% -10%, var(--nacht-2), var(--nacht) 60%);color:var(--wit);overflow:hidden;padding:1.4rem 0 4.2rem}
@@ -80,8 +77,6 @@ h1,h2,h3{font-family:'Bricolage Grotesque',serif;line-height:1.08;letter-spacing
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.4rem 0 2.6rem}
 .merk{font-family:'Bricolage Grotesque',serif;font-weight:800;font-size:1.25rem;letter-spacing:.02em}
 .merk span{color:var(--amber)}
-.topbar a.bel{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;white-space:nowrap}
-.topbar a.bel:hover{color:var(--wit)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
 .hero .eyebrow{color:var(--goud);margin-bottom:1rem}
 .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:800;margin-bottom:1.1rem}
@@ -167,8 +162,6 @@ summary:focus-visible{outline:3px solid var(--delft);outline-offset:-3px}
 .zeker{list-style:none}
 .zeker li{display:flex;gap:.6rem;padding:.4rem 0;color:rgba(255,255,255,.85);font-size:.97rem}
 .zeker li::before{content:"✓";color:var(--amber);font-weight:800}
-.wa-alt{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.14)}
-.wa-alt p{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:.8rem}
 form{background:var(--wit);border-radius:18px;padding:2rem 1.8rem;color:var(--inkt);box-shadow:0 30px 70px rgba(0,0,0,.35)}
 .veld{margin-bottom:1.05rem}
 label{display:block;font-size:.86rem;font-weight:700;margin-bottom:.3rem}
@@ -225,7 +218,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="topbar">
       <div class="merk">LUNA <span>·</span> Cocktailbar</div>
-      <a class="bel" href="tel:+31158200255">📞 015 – 820 02 55</a>
     </div>
     <div class="hero-grid">
       <div>
@@ -234,10 +226,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="sub" id="hero-sub">In 2 uur leer je van onze bartenders shaken, mixen en garneren — en drink je natuurlijk alles wat je zelf maakt. Hét uitje voor teams, vrijgezellenfeesten en verjaardagen.</p>
         <div class="hero-cta">
           <a class="btn btn-primair" href="#aanvraag">Check beschikbaarheid →</a>
-          <a class="btn btn-wa" href="https://wa.me/31158200255?text=Hoi!%20Ik%20wil%20graag%20een%20cocktailworkshop%20aanvragen." target="_blank" rel="noopener">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.1 1z"/></svg>
-            App direct
-          </a>
         </div>
         <div class="trust">
           <span class="sterren" aria-hidden="true">★★★★★</span>
@@ -415,13 +403,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>100% vrijblijvend — je zit nergens aan vast</li>
           <li>Persoonlijk contact, geen automatische mails</li>
         </ul>
-        <div class="wa-alt">
-          <p>Liever even snel appen? Dat kan ook:</p>
-          <a class="btn btn-wa" href="https://wa.me/31158200255?text=Hoi!%20Ik%20wil%20graag%20een%20cocktailworkshop%20aanvragen." target="_blank" rel="noopener">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.1 1z"/></svg>
-            WhatsApp: 015 – 820 02 55
-          </a>
-        </div>
       </div>
       <div>
         <form id="workshop-form" novalidate>
@@ -504,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <b style="color:#fff">Cocktailbar Luna</b> · Markt 69, 2611 GS Delft
     </div>
     <div>
-      <a href="tel:+31158200255">015 – 820 02 55</a> &nbsp;·&nbsp;
+      <a href="mailto:cocktailbarlunadelft@gmail.com">cocktailbarlunadelft@gmail.com</a> &nbsp;·&nbsp;
       <a href="https://www.cafeluna-delft.nl" target="_blank" rel="noopener">cafeluna-delft.nl</a>
     </div>
   </div>
@@ -653,31 +634,13 @@ var LUNA = (function(){
     LUNA.push('formulier_gestart');
   }, true);
 
-  /* WhatsApp- en telefoonklikken zijn volwaardige leads */
-  document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){
-    a.addEventListener('click', function(){
-      LUNA.push('lead_whatsapp', {
-        event_id: LUNA.nieuwEventId(),
-        waarde: 70,
-        variant: LUNA.variant
-      });
-    });
-  });
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
-    a.addEventListener('click', function(){
-      LUNA.push('lead_telefoon', {
-        event_id: LUNA.nieuwEventId(),
-        waarde: 70,
-        variant: LUNA.variant
-      });
-    });
-  });
 })();
 
 /* =====================================================================
    Formulier-verzending
    Fail fast: geen stille fallbacks. Lukt het niet, dan ziet de bezoeker
-   dat direct en krijgt hij het WhatsApp-alternatief.
+   dat direct en krijgt hij een mailto-link naar Café Luna, met de
+   ingevulde gegevens al in de conceptmail.
    ===================================================================== */
 document.getElementById('workshop-form').addEventListener('submit', async function(e){
   e.preventDefault();
@@ -703,7 +666,16 @@ document.getElementById('workshop-form').addEventListener('submit', async functi
   if (!antwoord.ok) {
     knop.disabled = false;
     knop.textContent = 'Check beschikbaarheid →';
-    fout.textContent = 'Verzenden lukte niet. App ons via 015 – 820 02 55, dan regelen we het direct.';
+    var mailBody = 'Naam: ' + form.naam.value
+      + '\nTelefoon: ' + form.telefoon.value
+      + '\nE-mail: ' + form.email.value
+      + '\nAantal personen: ' + form.personen.value
+      + '\nVoorkeursdatum: ' + form.datum.value
+      + '\nSoort uitje: ' + (form.soort.value || 'onbekend');
+    var mailtoLink = 'mailto:cocktailbarlunadelft@gmail.com'
+      + '?subject=' + encodeURIComponent('Workshopaanvraag')
+      + '&body=' + encodeURIComponent(mailBody);
+    fout.innerHTML = 'Verzenden lukte niet. <a href="' + mailtoLink + '" style="color:#9B2C2C;font-weight:700;text-decoration:underline">Mail ons direct</a> op cocktailbarlunadelft@gmail.com, dan regelen we het alsnog.';
     fout.classList.add('zichtbaar');
     LUNA.push('formulier_fout', {status: antwoord.status});
     return;

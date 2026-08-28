@@ -17,7 +17,11 @@ via Google Ads en Meta.
 - **Geen build tooling toevoegen.** De pagina is bewust één bestand. Als iets een
   bundler nodig heeft, hoort het hier niet.
 - **Eén correct pad.** Geen fallbacks, geen alternatieve routes. Faalt de
-  formulier-POST, dan ziet de bezoeker een foutmelding met het WhatsApp-alternatief.
+  formulier-POST, dan ziet de bezoeker een foutmelding met een mailto-link naar
+  cocktailbarlunadelft@gmail.com, met de ingevulde gegevens al in de conceptmail.
+  (Café Luna heeft geen bruikbaar WhatsApp-/telefoonnummer: er is geen 06-nummer,
+  en het 015-nummer verwijst via een bandje terug naar dit formulier — daarom zijn
+  alle WhatsApp- en bel-knoppen uit de pagina gehaald.)
 - **Fail fast in de Function.** Ontbrekende omgevingsvariabelen of validatiefouten
   gooien direct een error. Niet stil doorgaan.
 - **Elke functie doet één ding.** `stuurMail`, `stuurNaarMeta`, `verifieerTurnstile`
@@ -33,8 +37,6 @@ GTM-container mee aan te passen — triggers matchen op exacte naam.
 | Event | Wanneer | Payload |
 |---|---|---|
 | `lead_formulier` | Formulier succesvol verzonden | `event_id`, `waarde`, `variant`, `personen`, `soort_uitje` |
-| `lead_whatsapp` | Klik op WhatsApp-knop | `event_id`, `waarde`, `variant` |
-| `lead_telefoon` | Klik op telefoonnummer | `event_id`, `waarde`, `variant` |
 | `formulier_gestart` | Eerste invoer in het formulier | — |
 | `scroll_diepte` | 50% en 75% | `diepte` |
 | `faq_geopend` | FAQ-item uitgeklapt | `vraag` |
@@ -72,9 +74,9 @@ META_CAPI_TOKEN
 
 ## Placeholders die nog vervangen moeten worden
 
-Zoek op `XXXX` in `index.html`:
+GTM-container-ID (`GTM-P34MFTWB`) staat er al in. Nog te doen, zoek op `XXXX`
+in `index.html`:
 
-- `GTM-XXXXXXX` (2×: head-script en noscript-iframe)
 - Cookiebot `data-cbid`
 - Turnstile `data-sitekey`
 
@@ -85,7 +87,6 @@ Inhoudelijk nog te verifiëren bij de klant:
   Google-reviews met toestemming
 - Reviewscore 4,6 / 300+ verifiëren
 - Foto's ontbreken; de hero heeft echt beeld nodig
-- WhatsApp-nummer verwijst nu naar de vaste lijn
 
 ## Commando's
 
