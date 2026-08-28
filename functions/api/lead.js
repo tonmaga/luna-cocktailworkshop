@@ -30,16 +30,26 @@ export async function onRequestPost({ request, env }) {
   // Honeypot: alleen bots vullen een onzichtbaar veld in.
   if (lead.website) return json({ ok: true }, 200); // stil laten slagen, bot leert niets
 
-  await verifieerTurnstile(lead['cf-turnstile-response'], env.TURNSTILE_SECRET,
-                           request.headers.get('CF-Connecting-IP'));
+  try {
+    await verifieerTurnstile(lead['cf-turnstile-response'], env.TURNSTILE_SECRET,
+                             request.headers.get('CF-Connecting-IP'));
+  } catch (err) {
+    console.error('Turnstile mislukt:', err);
+    return json({ ok: false, stap: 'turnstile', reden: String(err.message || err) }, 400);
+  }
 
   // --- 2. Validatie --------------------------------------------------------
   for (const veld of ['naam', 'telefoon', 'email', 'personen', 'datum']) {
-    if (!lead[veld]) throw new Error(`Verplicht veld ontbreekt: ${veld}`);
+    if (!lead[veld]) return json({ ok: false, stap: 'validatie', veld }, 400);
   }
 
   // --- 3. Mail naar Luna ---------------------------------------------------
-  await stuurMail(lead, env);
+  try {
+    await stuurMail(lead, env);
+  } catch (err) {
+    console.error('Mail mislukt:', err);
+    return json({ ok: false, stap: 'mail', reden: String(err.message || err) }, 502);
+  }
 
   // --- 4. Meta Conversions API (best effort, blokkeert de aanvraag niet) ---
   // Server-side event met hetzelfde event_id als de pixel, zodat Meta
