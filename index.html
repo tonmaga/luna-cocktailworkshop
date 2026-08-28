@@ -638,13 +638,7 @@ document.getElementById('workshop-form').addEventListener('submit', async functi
     try { details = await antwoord.json(); } catch (e) {}
     if (details) console.error('Formulier mislukt:', details);
 
-    var foutRegel = 'Verzenden lukte niet. <a href="' + mailtoLink + '" style="color:#9B2C2C;font-weight:700;text-decoration:underline">Mail ons direct</a> op cocktailbarlunadelft@gmail.com, dan regelen we het alsnog.';
-    if (details && details.stap) {
-      foutRegel += '<br><small style="opacity:.7">Debug: stap "' + details.stap + '"' +
-        (details.reden ? ' — ' + details.reden : '') +
-        (details.veld ? ' (' + details.veld + ')' : '') + '</small>';
-    }
-    fout.innerHTML = foutRegel;
+    fout.innerHTML = 'Verzenden lukte niet. <a href="' + mailtoLink + '" style="color:#9B2C2C;font-weight:700;text-decoration:underline">Mail ons direct</a> op cocktailbarlunadelft@gmail.com, dan regelen we het alsnog.';
     fout.classList.add('zichtbaar');
     LUNA.push('formulier_fout', {status: antwoord.status, stap: details && details.stap});
     return;
